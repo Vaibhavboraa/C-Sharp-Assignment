@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace TechShop.Exception
 {
-    internal class IncompleteOrderException
+    internal class IncompleteOrderException:System.Exception
     {
+        public IncompleteOrderException() : base()
+        {
+        }
+
+        public IncompleteOrderException(string message) : base(message)
+        {
+        }
+
+        public IncompleteOrderException(string message, System.Exception innerException) : base(message, innerException)
+        {
+        }
     }
 }
